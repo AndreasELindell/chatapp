@@ -1,0 +1,35 @@
+<div class="page">
+  <div class="chat-panel">
+      <div class="sidebar">
+        <h2>Connected Users</h2>
+        <ul class="userslist">
+          <li *ngFor="let user of userList">
+            {{ user}}
+          </li>
+          <li>
+            hello!
+          </li>
+      </ul>
+      </div>
+      <div class="content">
+        <div class="messagelog">
+          <div style="display: flex;">
+            <ul class="messageslist">
+              <li *ngFor="let msg of messages">
+                {{ msg.user }}: {{ msg.message }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="messageinput">
+        <form [formGroup]="messagebox" class="loginform" (ngSubmit)="sendGroupMessage()"> 
+          <mat-form-field class="messagebox">
+            <textarea type="textbox" matInput formControlName="message" placeholder="Message"></textarea>
+          </mat-form-field>
+          <button mat-raised-button type="submit" class="messagebutton" [disabled]="!messagebox.valid">Send message</button>
+        </form>
+        
+        
+    </div>
+  </div>
+</div>

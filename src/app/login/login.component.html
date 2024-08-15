@@ -1,0 +1,19 @@
+
+<div class="page">
+    <div class="login-panel">
+        <form [formGroup]="profileForm" class="loginform" (ngSubmit)="onSubmit()"> 
+            <h1>Welcome to SignalR Chatapp!</h1>
+            <mat-form-field class="inputsection">
+                <mat-label>Username</mat-label>
+                <input type="text" matInput formControlName="username">
+            </mat-form-field>
+            <mat-form-field class="inputsection">
+                <mat-label>Chatroom</mat-label>
+                <input type="text" matInput formControlName="chatroom">
+            </mat-form-field>
+            <button mat-raised-button type="submit" [disabled]="!profileForm.valid">
+                Join Chat!
+            </button>
+        </form>
+    </div>
+</div>
