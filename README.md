@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
+This is a simple SignalR chat app using Websockets to .Net backend for direct messaging and live updating of connected users. 
+
+I made this app for learning purposes and hopefully someone trying to learn the basics of SignalR and websockets can find this repo useful.
+
+You only need to clone repo and run it with instructions below!
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
